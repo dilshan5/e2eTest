@@ -5,7 +5,10 @@ exports.config = {
             url: 'https://www.bergfreunde.eu',
             browser: 'chrome',
             windowSize: "maximize",
+            uniqueScreenshotNames: true,
+            fullPageScreenshots: true,
             smartWait: 5000,
+            waitForNavigation: [ "domcontentloaded", "networkidle0" ],
             timeouts: {
                 "page load": 10000
             }
@@ -18,6 +21,8 @@ exports.config = {
         I: './steps_file.js',
         homePage: './pages/HomePage.js',
         brandSearchResultPage: './pages/BrandSearchResultPage.js',
+        searchResultPage: './pages/SearchResultPage.js',
+        productDisplayPage: './pages/ProductDisplayPage.js'
     },
     mocha: {},
     bootstrap: null,
@@ -28,6 +33,8 @@ exports.config = {
         steps: [
             './step_definitions/HomePageSteps.js',
             './step_definitions/BrandSearchResultPageSteps.js',
+            './step_definitions/SearchResultPageSteps.js',
+            './step_definitions/ProductDisplayPageSteps.js'
         ]
     },
     plugins: {

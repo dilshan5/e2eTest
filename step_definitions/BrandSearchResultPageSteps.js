@@ -1,5 +1,4 @@
 const {I, brandSearchResultPage} = inject();
-const assert = require('assert');
 
 When('I should be in Brand Search Landing Page', () => {
     I.seeInCurrentUrl(brandSearchResultPage.pageUrl);
