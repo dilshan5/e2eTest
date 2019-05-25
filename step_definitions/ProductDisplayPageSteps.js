@@ -1,4 +1,5 @@
 const {I, productDisplayPage} = inject();
+var pp;
 
 Then('I should be redirected to PDP page', () => {
     I.seeElement(productDisplayPage.productDetailSection);
@@ -33,7 +34,35 @@ Then('I should see product details', async (table) => {
                 I.assertEqual(true, returnPolicy.includes("days returns policy"), "Product Return Policy Details are not Available.");
                 break;
             default:
-            // code block
+                I.say("Invalid Product Section", 'blue');
         }
+    }
+});
+
+Given('I am on Product Details Page', () => {
+    I.amOnPage('/lundhags-makke-pant-walking-trousers/');
+});
+
+When('I select some color', () => {
+    productDisplayPage.selectAvailableProductColor();
+});
+
+When('I select some size', () => {
+    productDisplayPage.selectAvailableProductSize();
+});
+
+When('I select quantity as {int}', (quantity) => {
+    I.fillField(productDisplayPage.productQuantity, quantity);
+});
+
+When('I add to cart', async () => {
+    I.click(productDisplayPage.addToCartButton);
+    I.wait(3); //wait until overlay get closed
+    productDisplayPage.totalPrice = await I.grabTextFrom(productDisplayPage.productTotalPrice); //get total price
+    productDisplayPage.prodTitle = await I.grabTextFrom(productDisplayPage.productTitle); //get product title
+
+    if (I.seeElement(productDisplayPage.closeCartOverlay)) {
+        I.click(productDisplayPage.closeCartOverlay);//if overlay is available then close it
+        I.wait(3); //wait until overlay get closed
     }
 });

@@ -27,3 +27,15 @@ Feature: Business rules
       | Product Weight        |
       | Product return policy |
 
+  Scenario: Verify Checkout Product Summary on the Cart Page
+    Given I am on Product Details Page
+    When I select some color
+    And I select some size
+    When I select quantity as 1
+    And  I add to cart
+    When I select quantity as 1
+    And  I add to cart
+    When I navigate to Add to Cart page
+    And  "Product Title" should be the same as added
+    Then "Total Price" should be the same as added
+

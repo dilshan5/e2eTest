@@ -8,7 +8,7 @@ exports.config = {
             uniqueScreenshotNames: true,
             fullPageScreenshots: true,
             smartWait: 5000,
-            waitForNavigation: [ "domcontentloaded", "networkidle0" ],
+            waitForNavigation: ["domcontentloaded", "networkidle0"],
             timeouts: {
                 "page load": 10000
             }
@@ -22,7 +22,8 @@ exports.config = {
         homePage: './pages/HomePage.js',
         brandSearchResultPage: './pages/BrandSearchResultPage.js',
         searchResultPage: './pages/SearchResultPage.js',
-        productDisplayPage: './pages/ProductDisplayPage.js'
+        productDisplayPage: './pages/ProductDisplayPage.js',
+        cartPage: './pages/CartPage.js'
     },
     mocha: {},
     bootstrap: null,
@@ -34,7 +35,8 @@ exports.config = {
             './step_definitions/HomePageSteps.js',
             './step_definitions/BrandSearchResultPageSteps.js',
             './step_definitions/SearchResultPageSteps.js',
-            './step_definitions/ProductDisplayPageSteps.js'
+            './step_definitions/ProductDisplayPageSteps.js',
+            './step_definitions/CartPageSteps.js'
         ]
     },
     plugins: {
