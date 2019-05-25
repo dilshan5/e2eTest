@@ -23,3 +23,13 @@ When('{string} should be the same as added', async (productDetails) => {
             I.say("Invalid Product Detail", 'blue');
     }
 });
+
+When('I add voucher code as {string}', (code) => {
+    I.fillField(cartPage.voucherCode, code);
+    I.click("Redeem");
+});
+
+Then('I should see the voucher error overlay with {string}',async (errorMsg) => {
+    let message = await I.grabTextFrom(cartPage.voucherError); //get voucher error
+    I.assertEqual(true, message.toLowerCase() === errorMsg.toLowerCase(), "Invalid Voucher Error Message");
+});

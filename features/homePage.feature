@@ -39,3 +39,12 @@ Feature: Business rules
     And  "Product Title" should be the same as added
     Then "Total Price" should be the same as added
 
+  Scenario: Verify the error message for invalid voucher code
+    Given I am on Product Details Page
+    When I select some color
+    And I select some size
+    When I select quantity as 1
+    And  I add to cart
+    And I navigate to Add to Cart page
+    When I add voucher code as "NotAvailable"
+    Then I should see the voucher error overlay with "Your voucher 'NotAvailable' was not approved."
