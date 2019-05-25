@@ -4,7 +4,7 @@ When('I navigate to Add to Cart page', () => {
     I.click(homePage.headerPanel.addToCartIcon);
     I.wait(3);// wait until cart overly is visible
     I.click(homePage.headerPanel.goToCartButton);
-    I.seeInCurrentUrl('/basket/')
+    I.seeInCurrentUrl(cartPage.pageUrl);
 });
 
 When('{string} should be the same as added', async (productDetails) => {
@@ -29,7 +29,11 @@ When('I add voucher code as {string}', (code) => {
     I.click("Redeem");
 });
 
-Then('I should see the voucher error overlay with {string}',async (errorMsg) => {
+Then('I should see the voucher error overlay with {string}', async (errorMsg) => {
     let message = await I.grabTextFrom(cartPage.voucherError); //get voucher error
     I.assertEqual(true, message.toLowerCase() === errorMsg.toLowerCase(), "Invalid Voucher Error Message");
+});
+
+When('I checkout until I reach the payment type page', () => {
+    I.click("Go to checkout");
 });

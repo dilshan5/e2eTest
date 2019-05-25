@@ -23,7 +23,8 @@ exports.config = {
         brandSearchResultPage: './pages/BrandSearchResultPage.js',
         searchResultPage: './pages/SearchResultPage.js',
         productDisplayPage: './pages/ProductDisplayPage.js',
-        cartPage: './pages/CartPage.js'
+        cartPage: './pages/CartPage.js',
+        paymentTypePage: './pages/PaymentTypePage.js',
     },
     mocha: {},
     bootstrap: null,
@@ -36,7 +37,8 @@ exports.config = {
             './step_definitions/BrandSearchResultPageSteps.js',
             './step_definitions/SearchResultPageSteps.js',
             './step_definitions/ProductDisplayPageSteps.js',
-            './step_definitions/CartPageSteps.js'
+            './step_definitions/CartPageSteps.js',
+            './step_definitions/PaymentTypePageSteps.js'
         ]
     },
     plugins: {
