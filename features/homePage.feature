@@ -1,7 +1,7 @@
 Feature: Business rules
-  In order to achieve my goals
-  As a persona
-  I want to be able to interact with a system
+  In order to Search a product
+  As a person
+  I want to be able to Navigate to Home Page
 
   Scenario: Home Page - Valid Brand Search validation
     Given I visit the web site as a guest user

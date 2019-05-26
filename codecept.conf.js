@@ -8,11 +8,10 @@ exports.config = {
         WebDriver: {
             url: 'https://www.bergfreunde.eu',
             browser: 'chrome',
-            windowSize: "maximize",
+            windowSize: 'maximize',
             uniqueScreenshotNames: true,
             fullPageScreenshots: true,
             smartWait: 5000,
-            waitForNavigation: ["domcontentloaded", "networkidle0"],
             timeouts: {
                 "page load": 10000
             }
