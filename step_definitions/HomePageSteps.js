@@ -7,8 +7,8 @@ Given('I visit the web site as a guest user', () => {
 });
 
 When('I search for {string}', (searchString) => {
-    I.click(homePage.headerPanel.searchForm);
-    I.waitForElement(homePage.headerPanel.searchField, 5);
+    I.click(homePage.headerPanel.searchIcon);
+    I.wait(5);
     I.fillField(homePage.headerPanel.searchField, searchString);
     I.click(homePage.headerPanel.searchIcon);
 });
