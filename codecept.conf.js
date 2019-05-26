@@ -57,6 +57,8 @@ exports.config = {
         retryFailedStep: {
             enabled: true,
         },
-
+        allure: {
+            enabled: true
+        }
     }
 }
