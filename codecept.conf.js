@@ -12,9 +12,7 @@ exports.config = {
             uniqueScreenshotNames: true,
             fullPageScreenshots: true,
             smartWait: 5000,
-            timeouts: {
-                "page load": 10000
-            }
+            timeout: 10000,
         },
         AssertWrapper: {
             require: "codeceptjs-assert"
@@ -55,6 +53,10 @@ exports.config = {
         wdio: {
             enabled: true,
             services: ['selenium-standalone']
-        }
+        },
+        retryFailedStep: {
+            enabled: true,
+        },
+
     }
 }
