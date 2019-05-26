@@ -1,4 +1,8 @@
 exports.config = {
+    tests: './*_test.js',
+    name: 'codeceptjs-e2eTest',
+    description: "CodeceptJS assignment",
+    author: "Dilshan Fernando",
     output: './output',
     helpers: {
         WebDriver: {
@@ -49,7 +53,5 @@ exports.config = {
             enabled: true,
             services: ['selenium-standalone']
         }
-    },
-    tests: './*_test.js',
-    name: 'codeceptjs-e2eTest'
+    }
 }

@@ -17,7 +17,7 @@ When('{string} should be the same as added', async (productDetails) => {
         case 'Total Price':
             let cartTotal = await I.grabTextFrom(cartPage.cartTotal); //get cart total price
             let cartPrice = cartTotal.toString().toLowerCase();
-            I.assertEqual(true, cartPrice === productDisplayPage.totalPrice, "Total price mismatched...");
+            I.assertEqual(cartPrice, productDisplayPage.totalPrice, "Total price mismatched...");
             break;
         default:
             I.say("Invalid Product Detail", 'blue');
@@ -31,7 +31,7 @@ When('I add voucher code as {string}', (code) => {
 
 Then('I should see the voucher error overlay with {string}', async (errorMsg) => {
     let message = await I.grabTextFrom(cartPage.voucherError); //get voucher error
-    I.assertEqual(true, message.toLowerCase() === errorMsg.toLowerCase(), "Invalid Voucher Error Message");
+    I.assertEqual(message.toLowerCase(), errorMsg.toLowerCase(), "Invalid Voucher Error Message");
 });
 
 When('I checkout until I reach the payment type page', () => {
