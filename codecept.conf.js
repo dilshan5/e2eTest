@@ -29,7 +29,11 @@ exports.config = {
         cartPage: './pages/CartPage.js',
         paymentTypePage: './pages/PaymentTypePage.js',
     },
-    mocha: {},
+    mocha: {
+        reporterOptions: {
+            reportDir: "output"
+        }
+    },
     bootstrap: null,
     teardown: null,
     hooks: [],

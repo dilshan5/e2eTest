@@ -23,4 +23,6 @@ jobs:
           command: sudo npm i npx
       - run:
           name: Run codeceptjs Test
-          command: npx codeceptjs run --steps
+          command: npx codeceptjs run --steps --reporter mochawesome
+      - store_artifacts:
+          path: output
