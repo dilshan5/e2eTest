@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - run: npm install -d
-        - run: npm install -g npx
+      - run: npm install -g npx
       - run: npx codeceptjs run --steps
