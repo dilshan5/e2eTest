@@ -1,6 +1,6 @@
 const {I, homePage, cartPage, productDisplayPage} = inject();
 
-When('I navigate to Add to Cart page', () => {
+When('I have navigate to Add to Cart page', () => {
     I.click(homePage.headerPanel.addToCartIcon);
     I.wait(3);// wait until cart overly is visible
     I.click(homePage.headerPanel.goToCartButton);

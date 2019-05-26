@@ -51,7 +51,7 @@ When('I select some size', () => {
     productDisplayPage.selectAvailableProductSize();
 });
 
-When('I select quantity as {int}', (quantity) => {
+When('I have select quantity as {int}', (quantity) => {
     I.fillField(productDisplayPage.productQuantity, quantity);
 });
 

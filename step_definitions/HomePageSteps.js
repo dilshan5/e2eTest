@@ -11,6 +11,7 @@ When('I search for {string}', (searchString) => {
     I.click(homePage.headerPanel.searchIcon);
     I.wait(5);
     I.fillField(homePage.headerPanel.searchField, searchString);
+    I.wait(5);
     I.click(homePage.headerPanel.searchIcon);
   //  I.say("I search for"+searchString,'blue');
 });
