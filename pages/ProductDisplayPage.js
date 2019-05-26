@@ -1,4 +1,4 @@
-const { I } = inject();
+const {I} = inject();
 
 module.exports = {
     // setting locators
@@ -17,12 +17,12 @@ module.exports = {
     prodTitle: '',
 
     //this method select an available product color
-    selectAvailableProductColor(){
+    selectAvailableProductColor() {
         I.click("//ul[@id='js-varlist-color']//li[contains(@class,'js-available')]");
     },
 
     //this method select an available product size
-    selectAvailableProductSize(){
+    selectAvailableProductSize() {
         I.click("//ul[@id='js-varlist-size']//li[contains(@class,'js-available')]");
     },
 }

@@ -1,4 +1,4 @@
-Feature: Business rules
+Feature: Business rules - Home Page
   In order to Search a product
   As a person
   I want to be able to verify Home Page functionality

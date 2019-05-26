@@ -1,4 +1,4 @@
-Feature: Business rules
+Feature: Business rules - Checkout
   In order to Order a product
   As a person
   I want to be able to Verify Checkout functionality

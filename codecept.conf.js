@@ -54,9 +54,6 @@ exports.config = {
             enabled: true,
             services: ['selenium-standalone']
         },
-        retryFailedStep: {
-            enabled: true,
-        },
         allure: {
             enabled: true
         }

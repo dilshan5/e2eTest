@@ -4,15 +4,15 @@ const {I, homePage} = inject();
 Given('I visit the web site as a guest user', () => {
     I.amOnPage('/');
     I.seeTitleEquals(homePage.pageTitle);
-   // I.say("I visit the web site as a guest user",'blue');
+    // I.say("I visit the web site as a guest user",'blue');
 });
 
 When('I search for {string}', (searchString) => {
     I.click(homePage.headerPanel.searchIcon);
-    I.wait(5);
+    I.wait(5);// wait for search textBox to be clickable
     I.fillField(homePage.headerPanel.searchField, searchString);
-    I.wait(5);
+    I.wait(5); // wait for icon to be clickable
     I.click(homePage.headerPanel.searchIcon);
-  //  I.say("I search for"+searchString,'blue');
+    //  I.say("I search for"+searchString,'blue');
 });
 

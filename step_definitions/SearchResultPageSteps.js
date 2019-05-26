@@ -5,7 +5,7 @@ When('I should be in Search Landing Page', () => {
 });
 
 Then('Page should have search keyword as {string}', async (keyWord) => {
-    let searchValue = await I.grabTextFrom(searchResultPage.searchKeyword); //get search results
+    let searchValue = await I.grabTextFrom(searchResultPage.searchKeyword); //get search result word
     let searchKeyword = searchValue.toString().toLowerCase();
     I.assertEqual(true, searchKeyword.includes(keyWord.toLowerCase()), "Invalid Brand Logo Displayed.")
 });

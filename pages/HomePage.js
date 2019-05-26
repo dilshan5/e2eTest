@@ -3,6 +3,7 @@ const {I} = inject();
 module.exports = {
     // setting locators
     pageTitle: 'Outdoor Gear & Clothing | Outdoor Online Shop | Bergfreunde.eu',
+    // Header panel locators
     headerPanel: {
         searchForm: {css: 'div.searchbox'},
         searchField: {css: 'input.searchfield.show-for-small-only'},
