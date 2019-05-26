@@ -8,13 +8,13 @@ This e2e test is done using CodeceptJS https://codecept.io/
 
 ### Installation
 
-e2e test requires [Node.js](https://nodejs.org/) v8+ to run.
+e2e test requires [Node.js](https://nodejs.org/) to run.
 
 Install the dependencies and devDependencies.
 
 ```sh
 $ cd codeceptjs-e2eTest
-$ npm install -d
+$ npm install 
 ```
 
 ### How to trigger UI test
@@ -31,9 +31,8 @@ $ npx codeceptjs run --steps
 
 First you need to download [allure-framework](https://github.com/allure-framework/allure2/releases).
 
-Then add the bin folder location into your PATH variable.Once you run your test suite, 'allure-results' directory will create inside target directory. Copy the path of it. Then open the command prompt. 
-
-To view the allure report, ruk=n test as,
+Then add the bin folder location into your PATH variable.
+To view the allure report, run test as,
 
 ```sh
 $ cd codeceptjs-e2eTest
@@ -45,3 +44,5 @@ To run all e2e tests with mocha report, just simply type
 ```sh
 $ npx codeceptjs run --steps --reporter mochawesome
 ```
+
+This will give you cli with steps in console and HTML report in output directory.
