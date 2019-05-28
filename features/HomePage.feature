@@ -16,3 +16,17 @@ Feature: Business rules - Home Page
     And I should be in Search Landing Page
     Then Page should have search keyword as "Denim"
 
+  Scenario Outline: Footer - Verify Customer Service links
+    Given I visit the web site as a guest user
+    When I Navigate to "<CUSTOMER_SERVICE>" Footer links
+    Then I verify the "<CUSTOMER_SERVICE>" Page
+    Examples:
+      | CUSTOMER_SERVICE   |
+      | Payment & Shipping |
+      | FAQs & Help        |
+      | Contact us         |
+      | Returns            |
+      | Complaints         |
+      | Customer info      |
+
+

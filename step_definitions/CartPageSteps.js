@@ -30,6 +30,7 @@ When('I add voucher code as {string}', (code) => {
 });
 
 Then('I should see the voucher error overlay with {string}', async (errorMsg) => {
+    I.wait(5); //wait until error overly display
     let message = await I.grabTextFrom(cartPage.voucherError); //get voucher error
     I.assertEqual(message.toLowerCase(), errorMsg.toLowerCase(), "Invalid Voucher Error Message");
 });

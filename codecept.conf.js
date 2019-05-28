@@ -12,7 +12,7 @@ exports.config = {
             uniqueScreenshotNames: true,
             fullPageScreenshots: true,
             smartWait: 5000,
-            timeout: 10000,
+            timeout: 20000,
         },
         AssertWrapper: {
             require: "codeceptjs-assert"

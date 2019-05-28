@@ -32,7 +32,7 @@ $ npx codeceptjs run --steps
 First you need to download [allure-framework](https://github.com/allure-framework/allure2/releases).
 
 Then add the bin folder location into your PATH variable.
-To view the allure report, run test as,
+To view the allure report,
 
 ```sh
 $ cd codeceptjs-e2eTest
