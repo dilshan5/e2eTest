@@ -23,6 +23,7 @@ module.exports = {
 
     //this method select an available product size
     selectAvailableProductSize() {
+        I.scrollPageToBottom();
         I.click("//ul[@id='js-varlist-size']//li[contains(@class,'js-available')]");
     },
 }

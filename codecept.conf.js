@@ -32,9 +32,6 @@ exports.config = {
             reportDir: "output"
         }
     },
-    bootstrap: null,
-    teardown: null,
-    hooks: [],
     gherkin: {
         features: './features/*.feature',
         steps: [
