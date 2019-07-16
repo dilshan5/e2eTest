@@ -1,6 +1,6 @@
 # Introduction
 
-This is a codeceptjs project. Use BDD with selenium web driver
+This is a codeceptjs project. Use BDD with selenium web driver. Also used CircleCI as continues integration tool.
 
 # How to use
 
