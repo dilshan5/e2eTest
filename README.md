@@ -46,3 +46,7 @@ $ npx codeceptjs run --steps --reporter mochawesome
 ```
 
 This will give you cli with steps in console and HTML report in output directory.
+
+### CircleCI report
+
+You can find the report here : https://app.circleci.com/pipelines/github/dilshan5/e2eTest?invite=true
